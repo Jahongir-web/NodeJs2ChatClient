@@ -11,7 +11,7 @@ import {Conversation} from '../../components/Conversation/Conversation'
 import { userChats } from '../../api/chatRequests'
 import { EditModal } from '../../components/EditModal/EditModal'
 
-const socket = io.connect(`http://localhost:4001/`)
+const socket = io.connect(`https://nodejs2chatserver-production.up.railway.app/`)
 
 export const Chat = () => {
 
