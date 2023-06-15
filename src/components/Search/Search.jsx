@@ -28,6 +28,7 @@ export const Search = () => {
     }
 
     getUsers()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const search = (e) => {

@@ -25,9 +25,10 @@ export const Conversation = ({data, online}) => {
         }
       }
     }
-
     getUserData()
-  }, [])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [userId])
+
   return (
     <>
       <div className='conversation'>

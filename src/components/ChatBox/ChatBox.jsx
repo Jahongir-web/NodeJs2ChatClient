@@ -9,7 +9,7 @@ import {UilEllipsisV} from "@iconscout/react-unicons"
 import InputEmoji from "react-input-emoji";
 
 export const ChatBox = ({setSendMessage, receivedMessage}) => {
-  const {currentUser, exit, setModal, modal, setUser, currentChat} = useInfoContext()
+  const {currentUser, exit, setModal, setUser, currentChat} = useInfoContext()
 
   const [userData, setUserData] = useState(null)
   const [messages, setMessages] = useState([])
@@ -36,7 +36,9 @@ export const ChatBox = ({setSendMessage, receivedMessage}) => {
     if(currentChat) {
       getUserData()
     }
+
     
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentChat, currentUser._id])
 
   // fetch messages
@@ -54,7 +56,7 @@ export const ChatBox = ({setSendMessage, receivedMessage}) => {
     if(currentChat) {
       fetchMessages()
     }
-
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentChat])
 
   useEffect(()=> {
@@ -94,6 +96,7 @@ export const ChatBox = ({setSendMessage, receivedMessage}) => {
     if(currentChat && receivedMessage !== null && receivedMessage?.chatId === currentChat._id) {
       setMessages([...messages, receivedMessage])
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [receivedMessage])
 
   const handleChange = (newMessage) => {

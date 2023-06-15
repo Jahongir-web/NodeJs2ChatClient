@@ -36,6 +36,7 @@ export const Chat = () => {
     }
 
     getChats()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentUser._id])
 
   useEffect(()=> {
@@ -44,6 +45,7 @@ export const Chat = () => {
     socket.on('get-users', (users)=> {
       setOnlineUsers(users)
     })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentUser])
 
   // send message to socket server
